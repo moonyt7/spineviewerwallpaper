@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+    <FrameLayout
+        android:id="@+id/gdx_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/controls_panel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <LinearLayout
+        android:id="@+id/controls_panel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_control_panel"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!-- 模型信息行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tv_model_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no_model_selected"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:maxLines="1"
+                android:ellipsize="end" />
+            <TextView
+                android:id="@+id/tv_model_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#AAFFFFFF"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <!-- 动画 + 皮肤 行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/animation"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp" />
+            <Spinner
+                android:id="@+id/spinner_animation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/btn_next_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:textSize="12sp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+        <!-- 皮肤 行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skin"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp" />
+            <Spinner
+                android:id="@+id/spinner_skin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <!-- 缩放 行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="2dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scale"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp" />
+            <SeekBar
+                android:id="@+id/seek_scale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+            <TextView
+                android:id="@+id/tv_scale_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="44dp"
+                android:gravity="end"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:text="1.0x" />
+        </LinearLayout>
+        <!-- 底部操作行：pma 开关 + 设为壁纸 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/premultiplied_alpha"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginEnd="6dp" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_pma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/btn_set_wallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_as_wallpaper"
+                android:textSize="12sp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

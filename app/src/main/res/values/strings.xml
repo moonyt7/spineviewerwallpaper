@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spine Player</string>
+    <string name="wallpaper_name">Spine 动态壁纸</string>
+
+    <!-- 导航 -->
+    <string name="nav_models">模型</string>
+    <string name="nav_player">播放</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- 模型列表 -->
+    <string name="model_list_title">我的模型</string>
+    <string name="empty_model_list">还没有导入模型\n点击右下角 + 按钮导入 ZIP 文件</string>
+    <string name="import_zip">导入 ZIP</string>
+    <string name="set_wallpaper">设为壁纸</string>
+    <string name="delete">删除</string>
+    <string name="model_icon">模型图标</string>
+
+    <!-- 播放器 -->
+    <string name="no_model_selected">未选择模型</string>
+    <string name="animation">动画</string>
+    <string name="next">下一个</string>
+    <string name="scale">缩放</string>
+    <string name="set_as_wallpaper">设为动态壁纸</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">壁纸设置</string>
+    <string name="model_position">模型位置</string>
+    <string name="offset_x">水平</string>
+    <string name="offset_y">垂直</string>
+    <string name="model_scale">模型缩放</string>
+    <string name="fps_limit">帧率限制</string>
+    <string name="fps">帧率</string>
+    <string name="unlimited">不限</string>
+    <string name="interaction">交互</string>
+    <string name="tap_to_switch">点击切换动画</string>
+    <string name="background_color">背景颜色</string>
+    <string name="background_image">背景图片</string>
+    <string name="black">黑色</string>
+    <string name="white">白色</string>
+    <string name="gray">灰色</string>
+    <string name="transparent">透明</string>
+    <string name="reset_defaults">恢复默认设置</string>
+    <string name="skin">皮肤</string>
+    <string name="premultiplied_alpha">PMA（预乘Alpha）</string>
+    <string name="custom_color">自定义颜色</string>
+    <string name="choose_bg_image">从相册选择图片背景</string>
+    <string name="clear_bg_image">清除图片背景</string>
+    <string name="bg_image_hint">当前背景：图片</string>
+    <string name="bg_color_hint">当前背景：颜色</string>
+    <string name="red">红</string>
+    <string name="green">绿</string>
+    <string name="blue">蓝</string>
+    <string name="preview">预览</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="bg_image_copied">背景图片已应用</string>
+    <string name="bg_image_failed">背景图片应用失败</string>
+</resources>
